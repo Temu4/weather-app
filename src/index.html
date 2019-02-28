@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <!-- ================= Header =================  -->
+      <div class="header">
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars fa-2x"></i>
+        </button>
+        <div class="search-box">
+          <input
+            class="search-field"
+            type="text"
+            placeholder="Search location"
+          />
+          <i class="fas fa-search-location fa-lg"></i>
+        </div>
+      </div>
+      <!-- ================= Sidebar =================  -->
+      <div class="container__sidebar sidebar" id="sideBar">
+        <div class="sidebar__units">
+          <button class="units">C</button>
+          <button class="units">F</button>
+        </div>
+        <div class="sidebar__categories">
+          <button class="category">Favorite list</button>
+          <button class="category">Last searched</button>
+        </div>
+      </div>
+      <!-- ================= Main =================  -->
+      <div class="main">
+        <div class="main__content">111</div>
+        <div class="main__weather-icon weather-icon"></div>
+        <div class="main__more-info"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
