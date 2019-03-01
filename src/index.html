@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -36,21 +37,126 @@
       <!-- ================= Sidebar =================  -->
       <div class="container__sidebar sidebar" id="sideBar">
         <div class="sidebar__units">
-          <button class="units">C</button>
-          <button class="units">F</button>
+          <button class="units" data-type="btn-celcius">&deg C</button>
+          <button class="units" data-type="btn-fahrenheit">&deg F</button>
         </div>
         <div class="sidebar__categories">
-          <button class="category">Favorite list</button>
-          <button class="category">Last searched</button>
-        </div>
-      </div>
-      <!-- ================= Main =================  -->
-      <div class="main">
-        <div class="main__content">111</div>
-        <div class="main__weather-icon weather-icon"></div>
-        <div class="main__more-info"></div>
+        <button class="category" data-type="btn-main">Main</button>
+        <button class="category" data-type="btn-favorite">Favorite list</button>
+        <button class="category" data-type="btn-history">Last searched</button>
       </div>
     </div>
+    <!-- ================= Main =================  -->
+    <div class="main" id="main">
+      <div class="main__forecast">
+        <div class="forecast__weather-location weather-location">
+          Kyiv, Ukraine<i class="far fa-heart red favorite-label"></i>
+        </div>
+        <div class="forecast__weather-temp weather-temp">
+          +10<span class="temp-units">&deg C</span>
+        </div>
+        <div class="forecast__weather-icon weather-icon">
+          <i class="fas fa-sun fa-spin fa-5x yellow"></i>
+        </div>
+      </div>
+      <div class="main__detailed">
+        <div class="detailed__today">
+          <div class="detailed__title">Today</div>
+          <div class="today today--morring">
+            <div class="detailed__weather-temp weather-temp">
+              +8<span class="temp-units">&deg C</span>
+            </div>
+            <div class="forecast__weather-icon weather-icon">
+              <i class="fas fa-sun yellow"></i>
+            </div>
+          </div>
+          <div class="today today--day">
+            <div class="detailed__weather-temp weather-temp">
+              +10<span class="temp-units">&deg C</span>
+            </div>
+            <div class="forecast__weather-icon weather-icon">
+              <i class="fas fa-sun yellow"></i>
+            </div>
+          </div>
+          <div class="today today--evening">
+            <div class="detailed__weather-temp weather-temp">
+              +12<span class="temp-units">&deg C</span>
+            </div>
+            <div class="forecast__weather-icon weather-icon">
+              <i class="fas fa-sun yellow"></i>
+            </div>
+          </div>
+          <div class="today today--night">
+            <div class="detailed__weather-temp weather-temp">
+              +6<span class="temp-units">&deg C</span>
+            </div>
+            <div class="forecast__weather-icon weather-icon">
+              <i class="fas fa-sun yellow"></i>
+            </div>
+          </div>
+        </div>
+        <div class="detailed__period">
+          <div class="detailed__title">Period</div>
+          <div class="period">Morning</div>
+          <div class="period">Day</div>
+          <div class="period">Evening</div>
+          <div class="period">Night</div>
+        </div>
+        <div class="detailed__tomorrow">
+          <div class="detailed__title">Tomorrow</div>
+          <div class="tomorrow tomorrow--morring">
+            <div class="detailed__weather-temp weather-temp">
+              +8<span class="temp-units">&deg C</span>
+            </div>
+            <div class="forecast__weather-icon weather-icon">
+              <i class="fas fa-sun yellow"></i>
+            </div>
+          </div>
+          <div class="tomorrow tomorrow--day">
+            <div class="detailed__weather-temp weather-temp">
+              +10<span class="temp-units">&deg C</span>
+            </div>
+            <div class="forecast__weather-icon weather-icon">
+              <i class="fas fa-sun yellow"></i>
+            </div>
+          </div>
+          <div class="tomorrow tomorrow--evening">
+            <div class="detailed__weather-temp weather-temp">
+              +12<span class="temp-units">&deg C</span>
+            </div>
+            <div class="forecast__weather-icon weather-icon">
+              <i class="fas fa-sun yellow"></i>
+            </div>
+          </div>
+          <div class="tomorrow tomorrow--night">
+            <div class="detailed__weather-temp weather-temp">
+              +6<span class="temp-units">&deg C</span>
+            </div>
+            <div class="forecast__weather-icon weather-icon">
+              <i class="fas fa-sun yellow"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main__precipitation">
+        <div class="precipitation__title">Probability of precipitation:</div>
+        <div class="precipitation__chanse">
+          15%<i class="fas fa-cloud-rain blue precipitation-label"></i>
+        </div>
+      </div>
+    </div>
+    <!-- ================= Favorite =================  -->
+      <ul class="favorite-list hidden" id="favoriteList"><h2>Your favorite list</h2>
+        <li class="favorite-list__item">Kyiv, Ukraine</li>
+        <li class="favorite-list__item">Odessa, Ukraine</li>
+        <li class="favorite-list__item">London, GB</li>
+      </ul>
+    <!-- ================= History =================  -->
+    <ul class="history-list hidden" id="historyList"><h2>Your history list</h2>
+      <li class="history-list__item">Paris, France</li>
+      <li class="history-list__item">NY, USA</li>
+      <li class="history-list__item">London, GB</li>
+    </ul>
 
     <script src="script.js"></script>
   </body>
